@@ -9,6 +9,13 @@ import HeadContent from "./HeadContent";
 function Layout({ children }) {
   const router = useRouter();
 
+  function HeaderFunction() {
+    if (router.pathname === "/") {
+      return <Header />;
+    }
+    return <HeaderInner />;
+  }
+
   return (
     <>
       <Head>
@@ -32,7 +39,8 @@ function Layout({ children }) {
 
         <title>ReactReserve</title>
       </Head>
-      <Header />
+      <HeaderFunction />
+
       {children}
       <div className="scroll-top">
         <i className="fas fa-angle-up"></i>
@@ -43,7 +51,6 @@ function Layout({ children }) {
       <script src="/static/assets/scripts/jquery.datepicker2.js"></script>
       <script src="/static/assets/scripts/isotope.pkgd.min.js"></script>
       <script src="/static/assets/scripts/app.js"></script>
-
       <script src="/static/assets/scripts/jquery-3.4.1.js"> </script>
       <script src="/static/assets/scripts/priceRangeSlider.js"></script>
     </>

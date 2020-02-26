@@ -25,6 +25,7 @@
     "react-bootstrap": "^1.0.0-beta.16",
     "react-bootstrap-date-picker": "^5.1.0",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.1.2",
     "react-stripe-checkout": "^2.6.3",
     "semantic-ui-react": "^0.87.3",
     "shortid": "^2.2.14",
